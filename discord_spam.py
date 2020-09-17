@@ -13,7 +13,12 @@ class discordbot:
         self.password  = password
         options = Options()
         options.headless = True
-        self.driver = webdriver.Chrome(options=options)
+        options.add_argument('--disable-gpu')
+        options.add_argument('--no-sandbox')
+        GOOGLE_CHROME_PATH = os.environ['GOOGLE_CHROME_PATH']
+        CHROMEDRIVER_PATH = os.environ['CHROMEDRIVER_PATH']
+        options.binary_location = GOOGLE_CHROME_PATH
+        self.driver = webdriver.Chrome(execution_path=CHROMEDRIVER_PATH, options=options)
         print('Headless Chrome Should Work Now')
 
     def closeBrowser(self):
