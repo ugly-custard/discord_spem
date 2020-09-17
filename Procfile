@@ -1,1 +1,1 @@
-worker: python discord_spam.py
+worker: python discord_spem.py
