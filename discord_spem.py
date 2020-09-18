@@ -38,7 +38,7 @@ class discordbot:
         print('spam is being used')
         driver = self.driver
         type_elem = driver.find_element_by_xpath('//*[@id="app-mount"]/div[2]/div/div[2]/div/div/div/div/div[2]/div/main/form/div/div/div/div/div[3]/div[2]/div')
-        list_of_langs = ['Bangla', 'Hindi', 'Italian', 'French', 'Japanese', 'Korean', 'Russian', 'Punjabi', 'Spanish', 'Swedish', 'Latin', 'Urdu', 'Tamil', 'Telugu', 'Thai', 'Malayalam', 'Nepali', 'Gujarati', 'Greek', 'German']
+        list_of_langs = ['Bengali', 'Hindi', 'Italian', 'French', 'Japanese', 'Korean', 'Russian', 'Punjabi', 'Spanish', 'Swedish', 'Latin', 'Urdu', 'Tamil', 'Telugu', 'Thai', 'Malayalam', 'Nepali', 'Gujarati', 'Greek', 'German']
         translator = Translator()
         I_love_you = translator.translate('I love you', dest=random.choice(list_of_langs)).text
         type_elem.send_keys('Fady, ' + I_love_you)
